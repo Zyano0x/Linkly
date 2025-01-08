@@ -69,7 +69,7 @@ export default function ShortenForm() {
                   />
                   <Button
                     type="submit"
-                    className="absolute right-1.5 w-20"
+                    className="absolute right-1.5 w-fit"
                     disabled={isCreatePending}
                   >
                     {isCreatePending && (
