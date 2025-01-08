@@ -4,7 +4,7 @@ import React from "react";
 import { createLink } from "@/database/queries";
 import { CreateLink, CreateLinkSchema } from "@/database/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Link } from "lucide-react";
+import { Link, Loader } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 
@@ -72,6 +72,12 @@ export default function ShortenForm() {
                     className="absolute right-1.5 w-20"
                     disabled={isCreatePending}
                   >
+                    {isCreatePending && (
+                      <Loader
+                        className="mr-2 size-4 animate-spin"
+                        aria-hidden="true"
+                      />
+                    )}
                     Shorten
                   </Button>
                 </div>
