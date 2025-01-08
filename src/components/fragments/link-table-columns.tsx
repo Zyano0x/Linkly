@@ -178,7 +178,7 @@ export function getColumns({
               <DropdownMenuItem
                 onSelect={() => {
                   navigator.clipboard
-                    .writeText(row.getValue("shortUrl"))
+                    .writeText(row.getValue("shortCode"))
                     .then(() => {
                       toast.success("Copied");
                     })
