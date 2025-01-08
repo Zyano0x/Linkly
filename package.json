@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf --glob \"**/node_modules\" \"**/dist\" \"**/.next\" \"**/.tsbuildinfo\"",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npx prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "seed": "dotenv tsx src/database/seed.ts"
