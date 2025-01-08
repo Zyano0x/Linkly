@@ -17,7 +17,7 @@ export function DataTableToolbar<TData>({
 }: DataTableToolbarProps<TData>) {
   return (
     <div
-      className={cn("flex w-full items-center justify-end", className)}
+      className={cn("flex w-full items-center justify-end p-1", className)}
       {...props}
     >
       <div className="flex items-center gap-2">

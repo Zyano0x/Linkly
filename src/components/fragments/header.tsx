@@ -15,7 +15,11 @@ export default function Header() {
 
         <nav className="flex flex-1 items-center justify-end">
           <Button variant="ghost" size="icon" className="size-8" asChild>
-            <Link href={"/"} target={"_blank"} rel="noopener noreferrer">
+            <Link
+              href={"https://github.com/Zyano0x/Linkly"}
+              target={"_blank"}
+              rel="noopener noreferrer"
+            >
               <svg
                 viewBox="0 0 438.549 438.549"
                 className="size-4"

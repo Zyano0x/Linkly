@@ -28,7 +28,10 @@ export function DataTable<TData>({
   ...props
 }: DataTableProps<TData>) {
   return (
-    <div className={cn("w-full space-y-2.5", className)} {...props}>
+    <div
+      className={cn("w-full space-y-2.5 overflow-auto", className)}
+      {...props}
+    >
       {children}
       <div className="overflow-hidden rounded-md border">
         <Table>

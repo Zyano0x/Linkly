@@ -65,7 +65,7 @@ export default function ShortenForm() {
                   <Input
                     placeholder="https://example.com/my-long-link"
                     {...field}
-                    className="h-12 pl-10 pr-28 rounded-lg"
+                    className="h-12 pl-10 pr-28 rounded-lg text-base"
                   />
                   <Button
                     type="submit"
