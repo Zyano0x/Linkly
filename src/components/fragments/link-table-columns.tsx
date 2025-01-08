@@ -93,7 +93,7 @@ export function getColumns({
             rel="noopener noreferrer"
             className="max-w-[31.25rem] truncate font-medium text-blue-500 hover:text-blue-400 visited:text-blue-500"
           >
-            {row.getValue("shortUrl")}
+            `${process.env.NEXT_PUBLIC_BASE_URL}/${row.getValue("shortUrl")}`
           </a>
         </div>
       ),

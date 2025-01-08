@@ -47,7 +47,7 @@ export function generateRandomLink(): Link {
     id: uuidv7(),
     code: `LINK-${customAlphabet("0123456789", 4)()}`,
     originalUrl: faker.internet.url(),
-    shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/${nanoid(8)}`,
+    shortUrl: nanoid(8),
     status: faker.helpers.shuffle(StatusEnum.options)[0] ?? "ACTIVE",
     clicks: faker.number.int({ max: 1337 }),
     createdAt: new Date(),
