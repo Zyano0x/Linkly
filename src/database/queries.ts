@@ -15,7 +15,7 @@ export async function trackLink(code: string) {
       return trx.link
         .findFirstOrThrow({
           where: {
-            shortUrl: {
+            shortCode: {
               endsWith: code,
               mode: "insensitive",
             },
@@ -89,7 +89,7 @@ export async function getLinks(input: GetLinks) {
           id: true,
           code: true,
           originalUrl: true,
-          shortUrl: true,
+          shortCode: true,
           clicks: true,
           status: true,
           createdAt: true,
@@ -121,7 +121,7 @@ export async function createLink(input: CreateLink) {
         data: {
           code: `LINK-${customAlphabet("0123456789", 4)()}`,
           originalUrl: input.originalUrl,
-          shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/${nanoid(8)}`,
+          shortCode: nanoid(8),
           clicks: input.clicks,
           status: input.status,
         },

@@ -93,7 +93,10 @@ export function DownloadQrDialog({ link, ...props }: DownloadTasksDialogProps) {
     startDownloadTransition(async () => {
       if (!link) return;
 
-      const updatedOptions = { ...options, data: `${link.shortUrl}` };
+      const updatedOptions = {
+        ...options,
+        data: `${process.env.NEXT_PUBLIC_BASE_URL}/${link.shortCode}`,
+      };
       const qrCode = new QRCodeStyling(updatedOptions);
       await qrCode.download({ extension: "png" });
 

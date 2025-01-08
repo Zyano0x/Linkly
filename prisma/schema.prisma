@@ -13,7 +13,7 @@ model Link {
   code        String   @map("code") @db.VarChar(128)
   clicks      Int      @map("clicks")
   originalUrl String   @map("original_url")
-  shortUrl    String   @unique @map("short_url")
+  shortCode   String   @unique @map("short_code")
   status      Status   @map("status")
   createdAt   DateTime @default(now()) @map("created_at")
   updatedAt   DateTime @updatedAt @map("updated_at")

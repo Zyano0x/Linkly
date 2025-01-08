@@ -81,19 +81,19 @@ export function getColumns({
       ),
     },
     {
-      accessorKey: "shortUrl",
+      accessorKey: "shortCode",
       header: ({ column }) => (
         <DataTableColumnHeader column={column} title="Short Url" />
       ),
       cell: ({ row }) => (
         <div className="flex space-x-2">
           <a
-            href={row.getValue("shortUrl")}
+            href={row.getValue("shortCode")}
             target="_blank"
             rel="noopener noreferrer"
             className="max-w-[31.25rem] truncate font-medium text-blue-500 hover:text-blue-400 visited:text-blue-500"
           >
-            {process.env.NEXT_PUBLIC_BASE_URL}/{row.getValue("shortUrl")}
+            {process.env.NEXT_PUBLIC_BASE_URL}/{row.getValue("shortCode")}
           </a>
         </div>
       ),
