@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Link {
+  id          String   @id @default(uuid())
+  code        String   @map("code") @db.VarChar(128)
+  clicks      Int      @map("clicks")
+  originalUrl String   @map("original_url")
+  shortUrl    String   @unique @map("short_url")
+  status      Status   @map("status")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("links")
+}
+
+enum Status {
+  ACTIVE
+  INACTIVE
+}
